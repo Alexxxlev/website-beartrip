@@ -1,0 +1,88 @@
+// main: ../style.less
+
+.tour {
+    padding: 1rem 0 4.6rem;
+}
+
+.tour__title {
+    margin-bottom: 1rem;
+
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 127.2%;
+
+    letter-spacing: 0.005em;
+    text-transform: uppercase;
+
+    color: @black;
+}
+
+.tour__text {
+    margin-bottom: 2.3rem;
+
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 18px;
+    letter-spacing: 0.005em;
+
+    color: #656565;
+}
+
+.tour__info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tour__date,
+.tour__item {
+    margin-right: .6rem;
+    padding: 1.6rem 2.3rem;
+
+    background: #F7F7F7;
+    border-radius: 3px;
+
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 19px;
+    letter-spacing: 0.005em;
+
+    color: #525252;
+}
+
+.tour__date {
+    position: relative;
+}
+
+.tour__date-from {
+    margin-right: 2.6rem;
+}
+
+.tour__date-to {
+    margin-left: 2.6rem;
+}
+
+.tour__date:after {
+    content: "";
+
+    width: 4rem;
+    height: 0.5px;
+
+    background: #D7D7D7;
+
+    position: absolute;
+    top: 50%;
+    left: 41%;
+    z-index: 1;
+
+    transform: rotate(90deg);
+}
+
+.tour__item {
+    padding-right: 2rem;
+}
+
+.tour__item-img {
+    margin-left: 4.3rem;
+}
