@@ -53,6 +53,8 @@
 
 .tour__date {
     position: relative;
+
+    cursor: pointer;
 }
 
 .tour__date-from {
@@ -81,8 +83,24 @@
 
 .tour__item {
     padding-right: 2rem;
+
+    position: relative;
+
+    cursor: pointer;
+}
+
+.tour__item.active .tour__accordion {
+    display: block;
 }
 
 .tour__item-img {
     margin-left: 4.3rem;
+}
+
+.tour__accordion {
+    display: none;
+
+    position: absolute;
+    top: 77px;
+    left: 0;
 }

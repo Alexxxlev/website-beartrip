@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <link href="assets/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bear Trip</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
 
@@ -51,14 +51,45 @@
                 <time class="tour__date-from" datetime="2022-03-17">17.03.2022</time>
                 <time class="tour__date-to" datetime="2022-03-25">25.03.2022</time>
             </div>
-            <div class="tour__item">
+
+            <label class="tour__item" for="accordion_1">
                 Количество взрослых
                 <img class="tour__item-img" src="assets/images/Arrow-bottom.svg" alt="">
+            </label>
+            <div class="tour__item-accordion">
+                <input class="tour__item-click" type="radio" name="counter" id="accordion_1">
+                <div class="counter">
+                    <span class="counter__btn min">
+                        <img class="counter__icon" src="assets/images/arrow-min.svg" alt="">
+                    </span>
+                    <input class="counter__input" type="text" name="qty" id="qty" maxlength="12">
+                    <span class="counter__btn plus">
+                        <img class="counter__icon" src="assets/images/arrow-plus.svg" alt="">
+                    </span>
+                </div>
             </div>
+
+            <!-- <div class="tour__item" data-collapse="#accordion_1">
+                Количество взрослых
+                <img class="tour__item-img" src="assets/images/Arrow-bottom.svg" alt="">
+                <div class="tour__accordion" id="accordion_1">
+                    <div class="counter">
+                        <span class="counter__btn min">
+                            <img class="counter__icon" src="assets/images/arrow-min.svg" alt="">
+                        </span>
+                        <input class="counter__input" type="text" name="qty" id="qty" maxlength="12">
+                        <span class="counter__btn plus">
+                            <img class="counter__icon" src="assets/images/arrow-plus.svg" alt="">
+                        </span>
+                    </div>
+                </div>
+            </div> -->
+
             <div class="tour__item">
                 Количество детей
                 <img class="tour__item-img" src="assets/images/Arrow-bottom.svg" alt="">
             </div>
+            
             <button class="btn btn--long" type="button">Подобрать тур</button>
         </div>
     </div>
@@ -69,47 +100,122 @@
 <section class="card">
     <div class="container">
         <h2 class="card__header">СПЕЦПРЕДЛОЖЕНИЯ</h2>
-        <div class="card__inner">
-            <div class="card__item">
-                <img class="card__img" src="assets/images/card/1.jpg" alt="">
-                <div class="card__news">Популярное</div>
-                <div class="card__info">
-                    <div class="card__title">Кавказ</div>
-                    <div class="card__date">08.05.2022</div>
-                    <div class="card__description"><p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet, nam libero tempore, cum soluta nobis est eligendi optio, cumque nihil</p></div>
-                    <button class="btn btn--card d-none" type="button">
-                        Подробнее
-                        <img src="" alt="">
-                    </button>
-                </div>
-            </div>
+        <div class="swiper mySwiper">
 
-            <div class="card__item">
-                <img class="card__img" src="assets/images/card/2.jpg" alt="">
-                <div class="card__news">Скидка 15%</div>
-                <div class="card__info">
-                    <div class="card__title">Кабардино-Балкария</div>
-                    <div class="card__date">08.05.2022</div>
-                    <div class="card__description"><p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet, nam libero tempore, cum soluta nobis est eligendi optio, cumque nihil</p></div>
-                    <button class="btn btn--card d-none" type="button">
-                        Подробнее
-                        <img src="" alt="">
-                    </button>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img class="card__img" src="assets/images/card/1.jpg" alt="">
+                    <div class="card__news">Популярное</div>
+                    <div class="card__info">
+                        <div class="card__title">Кавказ</div>
+                        <div class="card__date">08.05.2022</div>
+                    </div>
+                    <div class="card__moreinfo">
+                        <div class="card__title">Кавказ</div>
+                        <div class="card__date">08.05.2022</div>
+                        <div class="card__description"><p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet, nam libero tempore, cum soluta nobis est eligendi optio, cumque nihil</p></div>
+                        <button class="btn--card" type="button">
+                            Подробнее
+                            <img src="assets/images/Arrow-btn.svg" alt="">
+                        </button>
+                    </div>
                 </div>
-            </div>
 
-            <div class="card__item">
-                <img class="card__img" src="assets/images/card/3.jpg" alt="">
-                <div class="card__info">
-                    <div class="card__title">Джилы су</div>
-                    <div class="card__date">c 08.05.2022 по 21.05.2022</div>
-                    <div class="card__description"><p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet, nam libero tempore, cum soluta nobis est eligendi optio, cumque nihil</p></div>
-                    <button class="btn btn--card d-none" type="button">
-                        Подробнее
-                        <img src="" alt="">
-                    </button>
+                <div class="swiper-slide">
+                    <img class="card__img" src="assets/images/card/2.jpg" alt="">
+                    <div class="card__news">Скидка 15%</div>
+                    <div class="card__info">
+                        <div class="card__title">Кабардино-Балкария</div>
+                        <div class="card__date">08.05.2022</div>
+                    </div>
+                    <div class="card__moreinfo">
+                        <div class="card__title">Кабардино-Балкария</div>
+                        <div class="card__date">08.05.2022</div>
+                        <div class="card__description"><p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet, nam libero tempore, cum soluta nobis est eligendi optio, cumque nihil</p></div>
+                        <button class="btn--card" type="button">
+                            Подробнее
+                            <img src="assets/images/Arrow-btn.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <img class="card__img" src="assets/images/card/3.jpg" alt="">
+                    <div class="card__info">
+                        <div class="card__title">Джилы су</div>
+                        <div class="card__date">c 08.05.2022 по 21.05.2022</div>
+                    </div>
+                    <div class="card__moreinfo">
+                        <div class="card__title">Джилы су</div>
+                        <div class="card__date">c 08.05.2022 по 21.05.2022</div>
+                        <div class="card__description"><p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet, nam libero tempore, cum soluta nobis est eligendi optio, cumque nihil</p></div>
+                        <button class="btn--card" type="button">
+                            Подробнее
+                            <img src="assets/images/Arrow-btn.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <img class="card__img" src="assets/images/card/1.jpg" alt="">
+                    <div class="card__news">Популярное</div>
+                    <div class="card__info">
+                        <div class="card__title">Кавказ</div>
+                        <div class="card__date">08.05.2022</div>
+                    </div>
+                    <div class="card__moreinfo">
+                        <div class="card__title">Кавказ</div>
+                        <div class="card__date">08.05.2022</div>
+                        <div class="card__description"><p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet, nam libero tempore, cum soluta nobis est eligendi optio, cumque nihil</p></div>
+                        <button class="btn--card" type="button">
+                            Подробнее
+                            <img src="assets/images/Arrow-btn.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <img class="card__img" src="assets/images/card/2.jpg" alt="">
+                    <div class="card__news">Скидка 15%</div>
+                    <div class="card__info">
+                        <div class="card__title">Кабардино-Балкария</div>
+                        <div class="card__date">08.05.2022</div>
+                    </div>
+                    <div class="card__moreinfo">
+                        <div class="card__title">Кабардино-Балкария</div>
+                        <div class="card__date">08.05.2022</div>
+                        <div class="card__description"><p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet, nam libero tempore, cum soluta nobis est eligendi optio, cumque nihil</p></div>
+                        <button class="btn--card" type="button">
+                            Подробнее
+                            <img src="assets/images/Arrow-btn.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <img class="card__img" src="assets/images/card/3.jpg" alt="">
+                    <div class="card__info">
+                        <div class="card__title">Джилы су</div>
+                        <div class="card__date">c 08.05.2022 по 21.05.2022</div>
+                    </div>
+                    <div class="card__moreinfo">
+                        <div class="card__title">Джилы су</div>
+                        <div class="card__date">c 08.05.2022 по 21.05.2022</div>
+                        <div class="card__description"><p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet, nam libero tempore, cum soluta nobis est eligendi optio, cumque nihil</p></div>
+                        <button class="btn--card" type="button">
+                            Подробнее
+                            <img src="assets/images/Arrow-btn.svg" alt="">
+                        </button>
+                    </div>
                 </div>
             </div>
+            
+        </div>
+        <div class="swiper-button-next">
+            <img src="assets/images/arrow-next.svg" alt="">
+        </div>
+        <div class="swiper-button-prev">
+            <img src="assets/images/arrow-prev.svg" alt="">
         </div>
     </div>
 </section>
@@ -124,6 +230,46 @@
 
 </div><!-- /.Page -->
 
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="assets/js/app.js"></script>
+
+<script>
+    /* swiper */
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      spaceBetween: 3,
+      slidesPerGroup: 1,
+      loopFillGroupWithBlank: true,
+    
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+
+    /* input +- */
+    jQuery(function() {
+        var j = jQuery;
+        var addInput = '#qty';
+        var n = 1;
+
+        j(addInput).val(n);
+
+        j('.plus').on('click', function() {
+          j(addInput).val(++n);
+        });
+
+        j('.min').on('click', function() {
+          if (n >=1) {
+            j(addInput).val(--n);
+          } else {
+
+          }
+        });
+      }); 
+</script>
 
 </body>
 </html>

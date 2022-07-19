@@ -2,6 +2,26 @@
 
 .card {
     padding-bottom: 6.3rem;
+
+    position: relative;
+}
+
+.card:after {
+    content: "";
+
+    display: block;
+    width: 184px;
+    height: 678px;
+
+    position: absolute;
+    top: 75px;
+    left: -262px;
+    z-index: -1;
+
+    border: 7px dashed #E3E3E3;
+    border-radius: 65px;
+
+    transform: matrix(0.97, 0.26, -0.25, 1.55, 0, 0) rotate(24deg);
 }
 
 .card__header {
@@ -15,42 +35,6 @@
     text-transform: uppercase;
 
     color: @black;
-}
-
-.card__inner {
-    display: flex;
-    justify-content: space-between;
-}
-
-.card__item {
-    width: 33%;
-    height: auto;
-
-    position: relative;
-    cursor: pointer;
-
-    display: inline-block;
-}
-
-.card__item:after {
-    content: "";
-    display: block;    
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-
-    position: absolute;
-    top: 0;      
-    left: 0;
-
-    background: linear-gradient(180deg, rgba(98, 181, 186, 0.8) 0%, rgba(98, 186, 175, 0) 50px), linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
-    transform: rotate(-180deg);
-
-    transition: opacity .2s linear;
-}
-
-.card__item:hover.card__item:after {
-    opacity: 1;
 }
 
 .card__img {
@@ -87,6 +71,9 @@
     bottom: 22px;
     left: 42px;
     z-index: 2;
+
+    opacity: 1;
+    transition: opacity .2s linear;
 }
 
 .card__title {
@@ -109,6 +96,28 @@
     color: @white; 
 }
 
+.card__moreinfo {
+
+    position: absolute;
+    top: 65px;
+    right: 60px;
+    bottom: 23px;
+    left: 42px;
+    z-index: 3;
+
+    opacity: 0;
+    transition: opacity .2s linear;
+}
+
 .card__description {
-    display: none;
+    margin: .3rem 0 1.3rem;
+
+    font-family: 'Frutiger Neue';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.005em;
+
+    color: @white;
 }
