@@ -1,0 +1,43 @@
+// main: ../style.less
+
+.accordion-item {
+    border: none;
+}
+
+.accordion-header:focus {
+    border: none;
+}
+
+.accordion-button {
+    margin-right: .6rem;
+    padding: 1.6rem 2.3rem;
+
+    background: #F7F7F7;
+    border-radius: 3px !important;
+
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 19px;
+    letter-spacing: 0.005em;
+
+    color: #525252;
+}
+
+.accordion-button:after,
+.accordion-button:not(.collapsed)::after {
+    background: url(../images/Arrow-bottom.svg) no-repeat center;
+}
+
+.accordion-button:focus {
+    color: #525252;
+    background: #F7F7F7;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #525252;
+    background: #F7F7F7;
+}
+
+.accordion-body {
+    padding: 0.66rem 0 0;
+}

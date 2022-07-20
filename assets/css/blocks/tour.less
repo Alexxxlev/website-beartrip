@@ -32,12 +32,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 }
 
-.tour__date,
-.tour__item {
-    margin-right: .6rem;
+.tour__date {
     padding: 1.6rem 2.3rem;
 
     background: #F7F7F7;
@@ -82,25 +80,6 @@
 }
 
 .tour__item {
-    padding-right: 2rem;
-
-    position: relative;
-
-    cursor: pointer;
-}
-
-.tour__item.active .tour__accordion {
-    display: block;
-}
-
-.tour__item-img {
-    margin-left: 4.3rem;
-}
-
-.tour__accordion {
-    display: none;
-
-    position: absolute;
-    top: 77px;
-    left: 0;
+    max-width: 24rem;
+    width: 100%;
 }

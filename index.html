@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link href="assets/css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -52,42 +53,54 @@
                 <time class="tour__date-to" datetime="2022-03-25">25.03.2022</time>
             </div>
 
-            <label class="tour__item" for="accordion_1">
-                Количество взрослых
-                <img class="tour__item-img" src="assets/images/Arrow-bottom.svg" alt="">
-            </label>
-            <div class="tour__item-accordion">
-                <input class="tour__item-click" type="radio" name="counter" id="accordion_1">
-                <div class="counter">
-                    <span class="counter__btn min">
-                        <img class="counter__icon" src="assets/images/arrow-min.svg" alt="">
-                    </span>
-                    <input class="counter__input" type="text" name="qty" id="qty" maxlength="12">
-                    <span class="counter__btn plus">
-                        <img class="counter__icon" src="assets/images/arrow-plus.svg" alt="">
-                    </span>
+            <div class="tour__item">
+                <div class="accordion accordion-flush" id="accordionFlushExample_1">
+                    <div class="accordion-item">
+                        <div class="accordion-header" id="flush-headingOne_1">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne_1" aria-expanded="false" aria-controls="flush-collapseOne">
+                                Количество взрослых
+                            </button>
+                        </div>
+                        <div id="flush-collapseOne_1" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample_1">
+                            <div class="accordion-body">
+                                <div class="counter">
+                                    <span class="counter__btn min_1">
+                                        <img class="counter__icon" src="assets/images/arrow-min.svg" alt="">
+                                    </span>
+                                    <input class="counter__input" type="text" name="qty_1" id="qty_1" maxlength="12">
+                                    <span class="counter__btn plus_1">
+                                        <img class="counter__icon" src="assets/images/arrow-plus.svg" alt="">
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- <div class="tour__item" data-collapse="#accordion_1">
-                Количество взрослых
-                <img class="tour__item-img" src="assets/images/Arrow-bottom.svg" alt="">
-                <div class="tour__accordion" id="accordion_1">
-                    <div class="counter">
-                        <span class="counter__btn min">
-                            <img class="counter__icon" src="assets/images/arrow-min.svg" alt="">
-                        </span>
-                        <input class="counter__input" type="text" name="qty" id="qty" maxlength="12">
-                        <span class="counter__btn plus">
-                            <img class="counter__icon" src="assets/images/arrow-plus.svg" alt="">
-                        </span>
+            <div class="tour__item">
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <div class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                Количество детей
+                            </button>
+                        </div>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                <div class="counter">
+                                    <span class="counter__btn min_2">
+                                        <img class="counter__icon" src="assets/images/arrow-min.svg" alt="">
+                                    </span>
+                                    <input class="counter__input" type="text" name="qty_2" id="qty_2" maxlength="12">
+                                    <span class="counter__btn plus_2">
+                                        <img class="counter__icon" src="assets/images/arrow-plus.svg" alt="">
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div> -->
-
-            <div class="tour__item">
-                Количество детей
-                <img class="tour__item-img" src="assets/images/Arrow-bottom.svg" alt="">
             </div>
             
             <button class="btn btn--long" type="button">Подобрать тур</button>
@@ -232,6 +245,8 @@
 
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="assets/js/app.js"></script>
 
@@ -252,23 +267,43 @@
     /* input +- */
     jQuery(function() {
         var j = jQuery;
-        var addInput = '#qty';
+        var addInput1 = '#qty_1';
         var n = 1;
 
-        j(addInput).val(n);
+        j(addInput1).val(n);
 
-        j('.plus').on('click', function() {
-          j(addInput).val(++n);
+        j('.plus_1').on('click', function() {
+          j(addInput1).val(++n);
         });
 
-        j('.min').on('click', function() {
+        j('.min_1').on('click', function() {
           if (n >=1) {
-            j(addInput).val(--n);
+            j(addInput1).val(--n);
           } else {
 
           }
         });
-      }); 
+      });
+      
+    jQuery(function() {
+        var j = jQuery;
+        var addInput2 = '#qty_2';
+        var n = 1;
+
+        j(addInput2).val(n);
+
+        j('.plus_2').on('click', function() {
+          j(addInput2).val(++n);
+        });
+
+        j('.min_2').on('click', function() {
+          if (n >=1) {
+            j(addInput2).val(--n);
+          } else {
+
+          }
+        });
+    });
 </script>
 
 </body>
