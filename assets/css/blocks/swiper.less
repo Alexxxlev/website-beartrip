@@ -44,6 +44,8 @@
 }
 
 .swiper-button-next {
+    background: url(../images/arrow-next.svg) no-repeat;
+
     position: absolute;
     top: 15px !important;
     right: 63px !important;
@@ -52,6 +54,8 @@
 }
 
 .swiper-button-prev {
+    background: url(../images/arrow-prev.svg) no-repeat;
+
     position: absolute;
     top: 15px !important;
     right: 161px !important;
@@ -63,4 +67,12 @@
 .swiper-button-next:after,
 .swiper-button-prev:after {
     content: '' !important;
+}
+
+.swiper-button-next.swiper-button-disabled {
+    background: url(../images/arrow-next-dis.svg) no-repeat; 
+}
+
+.swiper-button-prev.swiper-button-disabled {
+    background: url(../images/arrow-prev-dis.svg) no-repeat;
 }

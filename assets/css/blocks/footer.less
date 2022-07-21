@@ -1,6 +1,148 @@
 // main: ../style.less
 
 .footer {
-    height: 25.3rem;
-    background: @black;
+    background: #212121 url(../images/footer-bg.png) no-repeat bottom;
+}
+
+.footer__inner {
+    padding: 4rem 3rem 7.6rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer__col {
+    padding: 0 .5rem;
+    
+    display: flex;
+
+    width: 100%;
+    max-width: 15.3rem;
+}
+
+.footer__logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.footer__logo-icon {
+    margin-bottom: 3.6rem;
+
+    max-width: 13rem;
+    max-height: 4rem;
+    width: auto;
+    height: auto;
+}
+
+.footer__logo-text {
+    font-family: 'Frutiger Neue';
+    font-weight: 100;
+    font-size: 9px;
+    line-height: 11px;
+    letter-spacing: 0.005em;
+
+    color: @white;
+}
+
+.footer__menu-title {
+    margin-bottom: 0.6rem;
+
+    font-family: 'Frutiger Neue';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.005em;
+
+    color: @white;
+}
+
+.footer__menu-link {
+    font-family: 'Frutiger Neue';
+    font-weight: 100;
+    font-size: 12px;
+    line-height: 160%;
+    letter-spacing: 0.005em;
+
+    color: @white;
+
+    text-decoration: none;
+
+    transition: color .2s linear;
+}
+
+.footer__menu-link:hover {
+    color: #62BAAF;
+}
+
+.footer__social {
+    margin-bottom: 2.5rem;
+}
+
+.footer__social-title,
+.footer__contacts-title {
+    margin-bottom: 2rem;
+
+    font-family: 'Frutiger Neue';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.005em;
+
+    color: @white;
+}
+
+.footer__social-link {
+    margin-right: 1.4rem;
+
+    text-decoration: none;
+}
+
+.footer__social-link path {
+    transition: fill .2s linear;
+}
+
+.footer__social-link:hover path {
+    fill: #62BAAF;
+}
+
+.footer__social-link:last-child {
+    margin-right: 0;
+}
+
+.footer__contacts-phone {
+    margin-bottom: 1.8rem;
+}
+
+.footer__contacts-phone,
+.footer__contacts-email {
+    display: flex;
+    align-items: center;
+}
+
+.footer__contacts-phone_link,
+.footer__contacts-email_link {
+    margin-left: 1rem;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 114.2%;
+   
+    color: @white;
+
+    text-decoration: none;
+
+    transition: color .2s linear;
+}
+
+.footer__contacts-phone_link {
+    margin-left: 1.2rem;
+}
+
+.footer__contacts-phone_link:hover,
+.footer__contacts-email_link:hover {
+    color: #62BAAF;
+
+    text-decoration: underline;
 }
