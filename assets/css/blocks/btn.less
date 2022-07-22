@@ -16,12 +16,12 @@
     color: @white;
 
     transition: background .2s linear;
-}
 
-.btn:hover,
-.btn:focus {
-    background: #6B9A94;
-    color: @white;
+    &:hover,
+     :focus {
+        background: #6B9A94;
+        color: @white;
+    }
 }
 
 .btn--long {
@@ -53,4 +53,17 @@
     img {
         margin-left: .8rem;
     }
+}
+
+.btn--modal {
+    margin: 0 auto;
+    padding: 1.1rem 3rem;
+
+    max-width: 22rem;
+    width: 100%;
+
+    border-radius: 8px;
+
+    font-weight: 400;
+    line-height: 21px;
 }

@@ -4,8 +4,11 @@
     border: none;
 }
 
-.accordion-header:focus {
+.accordion-header {
+
+    &:focus {
     border: none;
+    }
 }
 
 .accordion-button {
@@ -21,21 +24,21 @@
     letter-spacing: 0.005em;
 
     color: #525252;
+
+    &:focus {
+        color: #525252;
+        background: #F7F7F7;
+    }
+
+    &:not(.collapsed) {
+        color: #525252;
+        background: #F7F7F7;
+    }
 }
 
 .accordion-button:after,
 .accordion-button:not(.collapsed)::after {
     background: url(../images/Arrow-bottom.svg) no-repeat center;
-}
-
-.accordion-button:focus {
-    color: #525252;
-    background: #F7F7F7;
-}
-
-.accordion-button:not(.collapsed) {
-    color: #525252;
-    background: #F7F7F7;
 }
 
 .accordion-input {
