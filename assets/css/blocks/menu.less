@@ -9,8 +9,12 @@
     -webkit-background-size: cover;
     background-size: cover;
 
-    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 10px rgba(0,0,0,0.3);
     z-index: 11;
+
+    @media @tablet {
+        background: none;
+    }
 
     &.active {
         display: flex;
@@ -23,6 +27,19 @@
 
     display: flex;
     flex-direction: column;
+
+    @media @tablet {
+        margin-top: 3.3rem;
+    }
+}
+
+.menu__nav {
+    display: none;
+
+    @media @tablet {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .menu__list-item {

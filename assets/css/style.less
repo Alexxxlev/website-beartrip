@@ -18,6 +18,10 @@ body {
     font-size: 1rem;
     line-height: 1.6;
     color: @black;
+
+    &.no-scroll {
+        overflow: hidden;
+    }
 }
 
 *,
@@ -28,7 +32,6 @@ body {
 
 /* Blocks */
 @import "blocks/page";
-@import "blocks/helpers";
 @import "blocks/swiper";
 @import "blocks/container";
 @import "blocks/header";
@@ -45,3 +48,6 @@ body {
 @import "blocks/footer";
 @import "blocks/modal";
 @import "blocks/form";
+
+/* Helpers */
+@import "blocks/helpers";

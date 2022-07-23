@@ -36,13 +36,13 @@
 }
 
 .tour__date {
-    padding: 1.6rem 2rem;
+    padding: 1.6rem 2.3rem;
 
     display: flex;
     justify-content: space-between;
 
     max-width: 24.7rem;
-    width: 27%;
+    width: 26%;
     position: relative;
 
     background: #F7F7F7;
@@ -55,14 +55,28 @@
     letter-spacing: 0.005em;
 
     color: #525252;
+
+    @media @desktop-sm {
+        padding: 1.6rem 1.5rem;
+      
+        width: 27.5%;  
+    }
 }
 
 .tour__date-from {
     margin-right: 2.6rem;
+
+    @media @desktop-sm {
+        margin-right: 1.5rem;
+    }
 }
 
 .tour__date-to {
     margin-left: 2.6rem;
+
+    @media @desktop-sm {
+        margin-left: 1.5rem;
+    }
 }
 
 .tour__date:after {
@@ -79,9 +93,17 @@
     z-index: 1;
 
     transform: rotate(90deg);
+
+    @media @desktop-sm {
+        left: 39.5%;
+    }
 }
 
 .tour__item {
     max-width: 24.7rem;
-    width: 27%;
+    width: 26%;
+
+    @media @desktop-sm {
+        width: 27.5%;
+    }
 }

@@ -13,6 +13,10 @@
 
     &.active {
         background: #242424;
+
+        @media @tablet {
+            background: @white;
+        }
     }
 }
 
@@ -20,4 +24,19 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.header__signin {
+
+    .btn {
+        @media @tablet {
+            display: none;
+        } 
+    }
+
+    .ml-15 {
+        @media @mobile-sm {
+            margin-left: 0;
+        } 
+    }
 }

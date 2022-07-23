@@ -1,5 +1,13 @@
 // main: ../style.less
 
+.nav-left,
+.nav-right {
+
+    @media @tablet {
+        display: none;
+    }
+}
+
 .nav-left {
     margin-left: 1rem;
 }
@@ -22,12 +30,21 @@
 
     transition: color .2s linear;
 
+    @media @notebook {
+        margin-left: 0;
+    }
+
     &:first-child {
         margin-left: 0;
     }
 
     &:hover {
         color: #62BAAF;
+    }
+
+    &:hover:after,
+    &.active:after {
+        opacity: 1;
     }
 }
 
@@ -48,41 +65,34 @@
     
     transform: translateX(-50%);
     transition: opacity .2s linear;
-}
 
-.nav__link:hover:after,
-.nav__link.active:after {
-    opacity: 1;
+    @media @notebook {
+        width: 6rem;
+    }
 }
 
 .nav__logo {
     margin: 0 1rem;
 
     display: block;
-    position: relative;
-}
 
-.nav__logo-img {
     max-width: 33.3rem;
     max-height: 10rem;
     width: 100%;
-    height: auto;
-}
+    height: 100%;
 
-.nav__logo:after {
-    content: "";
+    @media @notebook {
+        max-width: 20rem;
+        max-height: 7rem;
+    }
 
-    display: block;
-    width: 7rem;
-    height: 3px;
+    @media @mobile {
+        max-width: 15rem;
+        max-height: 5rem;
+    }
 
-    background: @white;
-    opacity: 1;
-
-    position: absolute;
-    bottom: -1.5rem;
-    left: 50%;
-    z-index: 2;
-    
-    transform: translateX(-50%);
+    @media @mobile-sm {
+        max-width: 10rem;
+        max-height: 4rem;
+    }
 }
