@@ -29,13 +29,19 @@
                 <a class="nav__link" href="#">О проекте</a>
                 <a class="nav__link" href="#">Команда</a>
             </nav>
-            <a class="nav__logo" href="#"><img class="nav__logo-img" src="assets/images/logo.png" alt=""></a>
+            <img class="nav__logo" src="assets/images/logo.png" alt="">
             <nav class="nav-right">
                 <a class="nav__link" href="#">Партнерам</a>
                 <a class="nav__link" href="#">Туристам</a>
             </nav>
 
-            <button class="btn ml-15" type="button">Вход</button>
+            <div class="header__signin">
+                <button class="btn ml-15" type="button" data-modal="#modal_form">Вход</button>
+                <button class="btn--signin ml-15" type="button" data-modal="#modal_form">
+                    Вход
+                    <img src="assets/images/btn-signin.png" alt="Sing In">
+                </button>
+            </div>
 
         </div>
     </div>
@@ -44,6 +50,18 @@
         <div class="container">
             
             <ul class="menu__list">
+                <div class="menu__nav">
+                    <li class="menu__list-item">
+                        <a class="menu__list-link" href="#">О проекте</a>
+                    </li>
+                    <li class="menu__list-item">
+                        <a class="menu__list-link" href="#">Партнерам</a>
+                    </li>
+                    <li class="menu__list-item">
+                        <a class="menu__list-link" href="#">Команда</a>
+                    </li>
+                </div>
+
                 <li class="menu__list-item">
                     <a class="menu__list-link" href="#">Конструктор туров</a>
                 </li>
