@@ -10,23 +10,25 @@
     padding: 4rem 3rem 7.6rem;
 
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
 
-.footer__col {
-    padding: 0 .5rem;
-    
-    display: flex;
-
-    width: 100%;
-    max-width: 15.3rem;
+    @media @notebook {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
 
 .footer__logo {
+    padding-right: .5rem;
+
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+
+    max-width: 16rem;
+
+    @media @notebook {
+        order: 1;
+    }
 }
 
 .footer__logo-icon {
@@ -46,6 +48,31 @@
     letter-spacing: 0.005em;
 
     color: @white;
+}
+
+.footer__links {
+    margin: 0 auto;
+
+    display: flex;
+
+    width: 100%;
+    max-width: 680px;
+
+    @media @notebook {
+        padding-top: 4rem;
+
+        order: 3;
+    }
+}
+
+.footer__col {
+    padding: 0 .5rem;
+
+    display: flex;
+    justify-content: space-between;
+    
+    width: 34%;
+    max-width: 15.3rem;
 }
 
 .footer__menu-title {
@@ -78,8 +105,22 @@
     }
 }
 
+.footer__connection {
+    padding-left: .5rem;
+
+    @media @notebook {
+        display: flex;
+
+        order: 2;
+    }   
+}
+
 .footer__social {
     margin-bottom: 2.5rem;
+
+    @media @notebook {
+        margin-right: 3rem;
+    } 
 }
 
 .footer__social-title,
@@ -113,18 +154,18 @@
     }
 }
 
-.footer__contacts-phone {
+.footer__connection-phone {
     margin-bottom: 1.8rem;
 }
 
-.footer__contacts-phone,
-.footer__contacts-email {
+.footer__connection-phone,
+.footer__connection-email {
     display: flex;
     align-items: center;
 }
 
-.footer__contacts-phone_link,
-.footer__contacts-email_link {
+.footer__connection-phone_link,
+.footer__connection-email_link {
     margin-left: 1rem;
 
     font-weight: 400;
@@ -138,12 +179,12 @@
     transition: color .2s linear;
 }
 
-.footer__contacts-phone_link {
+.footer__connection-phone_link {
     margin-left: 1.2rem;
 }
 
-.footer__contacts-phone_link:hover,
-.footer__contacts-email_link:hover {
+.footer__connection-phone_link:hover,
+.footer__connection-email_link:hover {
     color: #62BAAF;
 
     text-decoration: underline;

@@ -26,6 +26,31 @@
         background: #6B9A94;
         color: @white;
     }
+
+    &.bgnone {
+
+        @media @tablet {
+            padding: .5rem;
+
+            display: none;
+
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 15px;
+            letter-spacing: 0.005em;
+
+            color: #666666;
+            background: transparent;
+
+            transition: color .2s linear;
+
+            &:hover,
+            &:focus {
+                background: transparent;
+                color: #62BAAF;
+            }    
+        }
+    }
 }
 
 .btn--long {

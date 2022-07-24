@@ -4,6 +4,10 @@
     margin: 2rem 0  0 2.3rem;
 
     display: none;
+
+    @media @tablet {
+        margin-left: 1.2rem;
+    }
 }
 
 .submenu__list-item {
@@ -11,6 +15,10 @@
 
     &:last-child {
         margin-bottom: 0;
+    }
+
+    @media @tablet {
+        margin-bottom: 1rem;
     }
 }
 
@@ -26,5 +34,20 @@
 
     &:hover {
         color: #62BAAF;
+    }
+}
+
+.submenu__list-link_desktop {
+
+    @media @tablet {
+        display: none;
+    }
+}
+
+.submenu__list-link_tablet {
+    display: none;
+
+    @media @tablet {
+        display: block;
     }
 }

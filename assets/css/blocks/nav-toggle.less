@@ -26,13 +26,25 @@
     }
 
     &.active .nav-toggle__item:before {
+        left: 0.33rem;
+
         transform-origin: left top;
-        transform: rotate(45deg) translate3d(0, -3px, 0);
+        transform: rotate(45deg) translate3d(0, -4px, 0);
+
+        @media @tablet {
+            background: #585858;
+        }
     }
 
     &.active .nav-toggle__item:after {
+        left: 0.33rem;
+
         transform-origin: left bottom;
         transform: rotate(-45deg) translate3d(0, 3px, 0);
+
+        @media @tablet {
+            background: #585858;
+        }
     }
 }
 
