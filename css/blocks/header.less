@@ -1,0 +1,83 @@
+// main: ../style.less
+
+.header {
+    padding-top: 3rem;
+
+    width: 100%;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+
+    @media @notebook {
+        padding-top: 2.3rem;
+    }
+
+
+    &.active {
+        background: #242424;
+
+        @media @tablet {
+            background: #F8F8F8;
+        }
+    }
+
+    &.active .btn--signin {
+        @media @tablet {
+            display: none;
+        }
+    }
+
+    &.active .btn.bgnone {
+        @media @tablet {
+            display: block;
+        }
+    }
+
+    &.active .nav__logo {
+        display: none;
+    }
+
+    &.active .nav__logo.nav__logo--menu {
+        @media @tablet {
+            display: block;
+        }
+    }
+
+    &.active .nav__logo.nav__logo--menu-desktop {
+        display: block;
+
+        @media @tablet {
+            display: none;
+        }
+    }
+}
+
+.header__inner {
+    padding: 0 1.3rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media @mobile-sm {
+        padding: 0 .7rem;
+    }
+}
+
+.header__signin {
+
+    .btn {
+        @media @tablet {
+            display: none;
+        } 
+    }
+
+    .ml-15 {
+        @media @mobile-sm {
+            margin-left: 0;
+        } 
+    }
+}

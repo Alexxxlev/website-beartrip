@@ -1,0 +1,129 @@
+// main: ../style.less
+
+.card {
+    padding-bottom: 6.3rem;
+
+    border: none;
+    position: relative;
+    z-index: 1;
+}
+
+.card:after {
+    content: "";
+
+    display: block;
+    width: 184px;
+    height: 678px;
+
+    position: absolute;
+    top: 75px;
+    left: -262px;
+    z-index: -1;
+
+    border: 7px dashed #E3E3E3;
+    border-radius: 65px;
+
+    transform: matrix(0.97, 0.26, -0.25, 1.55, 0, 0) rotate(24deg);
+
+    @media @desktop-sm {
+        display: none;
+    }
+}
+
+.card__header {
+    margin-bottom: 2.3rem;
+
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 127.2%;
+ 
+    letter-spacing: 0.005em;
+    text-transform: uppercase;
+
+    color: @black;
+}
+
+.card__img {
+    width: 100%;
+    height: auto;
+
+    border-radius: 3px;
+}
+
+.card__news {
+    padding: .93rem 1.4rem;
+
+    width: 9rem;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 13px;
+    letter-spacing: 0.005em;
+
+    color: @white;
+
+    background: #FF773D;
+    border-radius: 3px;
+
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    z-index: 2;
+}
+
+.card__info {
+    position: absolute;
+
+    bottom: 22px;
+    left: 42px;
+    z-index: 2;
+
+    opacity: 1;
+    transition: opacity .2s linear;
+}
+
+.card__title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+   
+    letter-spacing: 0.005em;
+
+    color: @white;
+}
+
+.card__date {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+
+    letter-spacing: 0.005em;
+    
+    color: @white; 
+}
+
+.card__moreinfo {
+
+    position: absolute;
+    top: 65px;
+    right: 60px;
+    bottom: 23px;
+    left: 42px;
+    z-index: 3;
+
+    opacity: 0;
+    transition: opacity .2s linear;
+}
+
+.card__description {
+    margin: .3rem 0 1.3rem;
+
+    font-family: 'Frutiger Neue';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.005em;
+
+    color: @white;
+}
