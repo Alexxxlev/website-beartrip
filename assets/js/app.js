@@ -19,14 +19,28 @@ navToggle.on("click", function(event) {
   menu.toggleClass("active");
 });
 
-/* Submenu
+/* Header Submenu
 ================================== */ 
-submenu.on("click", function(event) {
+dataSubmenu.on("click", function(event) {
   event.preventDefault();
 
-  dataSubmenu.toggleClass("active");
+  // let $this = $(this);
+  // let submenu = $this.submenu;
+  // let submenu = $this.parents('submenu');
+
+  submenu.toggleClass("active");
 });
 
+// /* Footer Submenu
+// ================================== */
+// submenu.on("click", function(event) {
+//   event.preventDefault();
+
+//   let $this = $(this);
+//   let dataSubmenu = $this.data('submenu');
+
+//   dataSubmenu.toggleClass("active");
+// });
 
 /* swiper
 ================================== */
