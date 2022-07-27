@@ -9,10 +9,50 @@
     height: 100vh;
     min-height: 66.6rem;
 
-    background: url(../images/intro-bg.png) center no-repeat;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 35%), url(../images/intro-bg.png) center no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
 
     position: relative;
     z-index: -1;
+}
+
+.intro::after {
+    content: "";
+    
+    width: 100%;
+    height: 500px;
+
+    background: url(../images/intro-bg_after.png) center no-repeat;
+    -webkit-background-size: 100% 90%;
+    background-size: 100% 90%;
+
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+
+    transform: translateY(-50%);
+
+    @media @desktop-sm {
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+
+    @media @tablet {
+        width: 300%;
+
+        top: 57%;
+    }
+
+    @media @mobile {
+        width: 300%;
+
+        top: 60%;
+    }
+
+    @media @mobile {
+        width: 320%;
+
+        top: 65%;
+    }
 }

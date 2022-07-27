@@ -2,7 +2,7 @@ var navToggle = $("#navToggle"),
     header = $("#header"),
     menu = $("#menu"),
     dataSubmenu = $("[data-submenu]"),
-    submenu = $("#submenu"),
+    // submenu = $("#submenu"),
     modal = $(".modal"),
     modalDialog = $(".modal__dialog");
 
@@ -19,28 +19,18 @@ navToggle.on("click", function(event) {
   menu.toggleClass("active");
 });
 
-/* Header Submenu
+/* Submenu
 ================================== */ 
 dataSubmenu.on("click", function(event) {
   event.preventDefault();
 
-  // let $this = $(this);
-  // let submenu = $this.submenu;
-  // let submenu = $this.parents('submenu');
+  let $this = $(this);
+  let submenuHeader = $this.parents('#submenu_header');
+  let submenuFooter = $this.parents('.footer__menu');
 
-  submenu.toggleClass("active");
+  submenuHeader.toggleClass("active");
+  submenuFooter.toggleClass("active");
 });
-
-// /* Footer Submenu
-// ================================== */
-// submenu.on("click", function(event) {
-//   event.preventDefault();
-
-//   let $this = $(this);
-//   let dataSubmenu = $this.data('submenu');
-
-//   dataSubmenu.toggleClass("active");
-// });
 
 /* swiper
 ================================== */
@@ -49,6 +39,25 @@ var swiper = new Swiper(".mySwiper", {
   spaceBetween: 3,
   slidesPerGroup: 1,
   loopFillGroupWithBlank: true,
+
+  breakpoints: {
+    1410: {
+      slidesPerView: 3
+    },
+
+    991: {
+      slidesPerView: 2,
+    },
+
+    767: {
+      slidesPerView: 1,
+
+      grid: {
+        rows: 2,
+        fill: 'row',
+      },
+    },
+  },
 
   navigation: {
     nextEl: ".swiper-button-next",

@@ -1,5 +1,19 @@
 // main: ../style.less
 
+.swiper-container {
+    @media @desktop-sm {
+        padding: 0 4rem;
+    }
+
+    @media @notebook {
+        padding: 0 1rem;
+    }
+
+    @media @tablet {
+        padding: 0 10rem;
+    }
+}
+
 .swiper {
     display: flex;
     justify-content: space-between;
@@ -10,7 +24,7 @@
 .swiper-slide {
     width: 33%;
     height: auto;
-
+    flex-direction: column;
     position: relative;
     cursor: pointer;
 

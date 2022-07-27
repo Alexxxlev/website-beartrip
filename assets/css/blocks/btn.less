@@ -54,10 +54,10 @@
 }
 
 .btn--long {
-    padding: 1.2rem 4rem;
+    padding: 1.3rem 4rem;
 
     width: 25%;
-    max-width: 283px;
+    max-width: 18.8rem;
 
     font-size: 20px;
     line-height: 30.485px;
@@ -66,6 +66,25 @@
         padding: 1.2rem 1rem;
 
         width: 16%;
+    }
+
+    @media @notebook {
+        margin-left: 8rem;
+
+        width: 100%;
+        max-width: 24.7rem;
+    }
+
+    @media @tablet {
+        margin-left: 2rem;
+
+        max-width: 19.6rem;
+    }
+
+    @media @mobile {
+        margin: 0 2.5rem;
+
+        width: 100%;
     }
 }
 
@@ -80,9 +99,7 @@
     font-weight: 100;
     font-size: 18px;
     line-height: 22px;
-
     letter-spacing: 0.005em;
-
     color: @white;
 
     img {
