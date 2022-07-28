@@ -56,3 +56,27 @@
         top: 65%;
     }
 }
+
+.intro__title {
+    display: none;
+
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 127.2%;
+ 
+    text-align: center;
+    letter-spacing: 0.005em;
+    text-transform: uppercase;
+
+    color: @white;
+
+    @media @mobile {
+        display: block;
+
+        position: absolute;
+        top: 146px;
+        left: 50%;
+        
+        transform: translateX(-50%);
+    }
+}

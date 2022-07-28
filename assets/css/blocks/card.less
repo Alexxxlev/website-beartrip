@@ -41,6 +41,12 @@
     text-transform: uppercase;
 
     color: @black;
+
+    @media @tablet {
+        margin-bottom: 1.6rem;
+
+        text-align: center;
+    }
 }
 
 .card__img {
@@ -69,6 +75,11 @@
     top: 6px;
     left: 6px;
     z-index: 2;
+
+    @media @mobile-sm {
+        left: auto;
+        right: 6px;
+    }
 }
 
 .card__info {
@@ -80,6 +91,11 @@
 
     opacity: 1;
     transition: opacity .2s linear;
+
+    @media @mobile-sm {
+        bottom: 15px;
+        left: 15px;
+    }
 }
 
 .card__title {
@@ -112,6 +128,18 @@
 
     opacity: 0;
     transition: opacity .2s linear;
+
+    @media @tablet {
+        top: 55px;
+        right: 25px;
+        left: 25px;
+    }
+
+    @media @mobile-sm {
+        top: 10px;
+        right: 10px;
+        left: 10px;
+    }
 }
 
 .card__description {
@@ -125,4 +153,10 @@
     letter-spacing: 0.005em;
 
     color: @white;
+
+    @media @mobile-sm {
+        margin: 0 0 .3rem;
+
+        font-size: 13px;
+    }
 }

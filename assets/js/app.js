@@ -6,9 +6,6 @@ var navToggle = $("#navToggle"),
     modal = $(".modal"),
     modalDialog = $(".modal__dialog");
 
-const modalCall = $("[data-modal]"),
-      modalClose = $("[data-close]");
-
 /* Menu nav toggle
 ================================== */
 navToggle.on("click", function(event) {
@@ -41,16 +38,23 @@ var swiper = new Swiper(".mySwiper", {
   loopFillGroupWithBlank: true,
 
   breakpoints: {
-    1410: {
+    1409: {
       slidesPerView: 3
     },
 
-    991: {
+    992: {
       slidesPerView: 2,
+      spaceBetween: 3,
+
+      grid: {
+        rows: 1,
+        fill: 'row',
+      },
     },
 
-    767: {
+    320: {
       slidesPerView: 1,
+      spaceBetween: 8,
 
       grid: {
         rows: 2,
@@ -109,6 +113,9 @@ jQuery(function() {
 
 /* Modal
 ================================== */
+const modalCall = $("[data-modal]"),
+      modalClose = $("[data-close]");
+
 modalCall.on("click", function(event) {
   event.preventDefault();
 
@@ -156,4 +163,8 @@ modalClose.on("click", function(event) {
     modalParent.removeClass('show');
     $("body").removeClass('no-scroll');
   }, 200);
+});
+
+modalDialog.on("click", function(event) {
+  event.stopPropagation();
 });
