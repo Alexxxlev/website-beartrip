@@ -1,0 +1,47 @@
+// main: ../style.less
+
+.counter {
+    padding: .66rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+
+    width: 100%;
+    height: 100%;
+    
+    background: #F7F7F7;
+    border-radius: 3px;
+}
+
+.counter__btn {
+    padding: 1rem 3rem;
+
+    align-items: center;
+
+    background: @white;
+    border-radius: 3px;
+
+    cursor: pointer; 
+}
+
+.counter__input {
+    width: 37%;
+    text-align: center;
+
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 29px;
+
+    letter-spacing: 0.005em;
+    color: @black;
+
+    border: none;
+    background: none;
+
+    @media @tablet {
+        font-size: 23px;
+        line-height: 21px;
+    }
+}

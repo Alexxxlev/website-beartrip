@@ -1,0 +1,343 @@
+// main: ../style.less
+
+.footer {
+    background: url(../images/footer-bg.png) no-repeat bottom;
+    background-color: #212121;
+    background-size: 150% 70px;
+    -webkit-background-size: 150% 70px;
+
+    @media @tablet {
+        background-size: 200% 60px;
+        -webkit-background-size: 200% 60px;
+    }
+
+    @media @mobile-sm {
+        background-size: 200% 50px;
+        -webkit-background-size: 200% 50px;
+    }
+}
+
+.footer__inner {
+    padding: 4rem 3rem 7.6rem;
+
+    display: flex;
+
+    @media @notebook {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    @media @tablet {
+        padding: 3rem 0 6.3rem;
+    }
+}
+
+.footer__logo {
+    padding-right: .5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    max-width: 16rem;
+
+    @media @notebook {
+        order: 1;
+    }
+
+    @media @tablet {
+        align-items: center;
+    }
+}
+
+.footer__logo-icon {
+    margin-bottom: 3.6rem;
+
+    max-width: 13rem;
+    max-height: 4rem;
+    width: auto;
+    height: auto;
+
+    @media @tablet {
+        margin-bottom: 1.8rem;
+    }
+
+    @media @mobile-sm {
+        margin-bottom: 1.3rem;
+    }
+}
+
+.footer__logo-text {
+    font-family: 'Frutiger Neue';
+    font-weight: 100;
+    font-size: 9px;
+    line-height: 11px;
+    letter-spacing: 0.005em;
+
+    color: @white;
+
+    @media @tablet {
+        text-align: center;
+    }
+}
+
+.footer__links {
+    margin: 0 auto;
+
+    display: flex;
+
+    width: 100%;
+    max-width: 680px;
+
+    @media @notebook {
+        margin-top: 4rem;
+
+        order: 3;
+    }
+
+    @media @mobile-sm {
+        margin-top: 3rem;
+
+        flex-direction: column;
+        order: 2;
+    }
+}
+
+.footer__col {
+    padding: 0 .5rem;
+
+    display: flex;
+    justify-content: space-between;
+    
+    width: 34%;
+    max-width: 15.3rem;
+
+    @media @mobile-sm {
+        margin: 0 auto 1.6rem;
+
+        width: auto;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.footer__menu {
+
+    @media @mobile-sm {
+
+        &.active .footer__menu-menu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        &.active .footer__menu-title {
+            color: #62BAAF;
+        }
+    }
+}
+
+.footer__menu-title {
+    margin-bottom: 0.6rem;
+
+    font-family: 'Frutiger Neue';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.005em;
+    color: @white;
+
+    position: relative;
+
+    transition: color .2s linear;
+
+    @media @mobile-sm {
+        cursor: pointer;
+
+        &:hover {
+            color: #62BAAF;
+        }
+
+        &.arrow {
+            padding-right: 2rem;
+        }
+
+        &.arrow:after {
+            content: "";
+        
+            width: .6rem;
+            height: .6rem;
+        
+            position: absolute;
+            top: 40%;
+            right: 0;
+        
+            border: 1.5px solid #62BAAF;
+            border-bottom: none;
+            border-right: none;
+        
+            transform: translateY(-40%) 
+                    rotate(225deg);
+        
+            transition: transform .2s linear;
+        }
+    }
+}
+
+.footer__menu-menu {
+
+    @media @mobile-sm {
+        display: none;
+    }
+}
+
+.footer__menu-item {
+    
+    @media @mobile-sm {
+        max-width: 8rem;
+        
+        text-align: center;
+    }
+}
+
+.footer__menu-link {
+    font-family: 'Frutiger Neue';
+    font-weight: 100;
+    font-size: 12px;
+    line-height: 160%;
+    letter-spacing: 0.005em;
+
+    color: @white;
+
+    text-decoration: none;
+
+    transition: color .2s linear;
+
+    &:hover {
+        color: #62BAAF;
+    }
+}
+
+.footer__connection {
+    padding-left: .5rem;
+
+    @media @notebook {
+        display: flex;
+
+        order: 2;
+    }
+
+    @media @tablet {
+        margin-top: 4rem;
+
+        justify-content: center;
+        width: 100%;
+    }
+
+    @media @mobile-sm {
+        padding-left: 0;
+
+        flex-direction: column;
+        width: auto;
+        text-align: center;
+
+        order: 3;
+    }
+}
+
+.footer__social {
+    margin-bottom: 2.5rem;
+
+    @media @notebook {
+        margin-right: 3rem;
+    }
+    
+    @media @mobile-sm {
+        margin: 0 0 1.8rem;
+    }
+}
+
+.footer__social-title,
+.footer__contacts-title {
+    margin-bottom: 2rem;
+
+    font-family: 'Frutiger Neue';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.005em;
+
+    color: @white;
+
+    @media @mobile-sm {
+        margin-bottom: 1.3rem;
+    }
+}
+
+.footer__social-link {
+    margin-right: 1.4rem;
+
+    text-decoration: none;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &  path {
+        transition: fill .2s linear;
+    }
+
+    &:hover path {
+        fill: #62BAAF;
+    }
+}
+
+.footer__connection-phone {
+    margin-bottom: 1.8rem;
+
+    @media @mobile-sm {
+        margin-bottom: 1.3rem;
+    }
+}
+
+.footer__connection-phone,
+.footer__connection-email {
+    display: flex;
+    align-items: center;
+}
+
+.footer__connection-phone_link,
+.footer__connection-email_link {
+    margin-left: 1rem;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 114.2%;
+   
+    color: @white;
+
+    text-decoration: none;
+
+    transition: color .2s linear;
+
+    @media @mobile-sm {
+        margin-left: .6rem;
+    }
+}
+
+.footer__connection-phone_link {
+    margin-left: 1.2rem;
+
+    @media @mobile-sm {
+        margin-left: .8rem;
+    }
+}
+
+.footer__connection-phone_link:hover,
+.footer__connection-email_link:hover {
+    color: #62BAAF;
+
+    text-decoration: underline;
+}
